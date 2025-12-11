@@ -1,0 +1,5 @@
+﻿# Ignore text files
+*.txt
+
+# Ignore Program.cs
+Program.cs
