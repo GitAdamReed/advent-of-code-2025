@@ -8,14 +8,12 @@ namespace AdventOfCode2025.Classes
 {
     public abstract class Day
     {
-        protected static string GetInputPath(string textfile)
-        {
-            return "C:\\Users\\adamr\\Documents\\GitHub\\Advent_Of_Code\\advent-of-code-2025\\AdventOfCode2025\\AdventOfCode2025\\Input\\" + textfile;
-        }
-        protected static string GetOutputPath(string textfile)
-        {
-            return "C:\\Users\\adamr\\Documents\\GitHub\\Advent_Of_Code\\advent-of-code-2025\\AdventOfCode2025\\AdventOfCode2025\\Output\\" + textfile;
-        }
+        private const string _inputPath = "C:\\Users\\adamr\\Documents\\GitHub\\Advent_Of_Code\\advent-of-code-2025\\AdventOfCode2025\\AdventOfCode2025\\Input";
+        private const string _outputPath = "C:\\Users\\adamr\\Documents\\GitHub\\Advent_Of_Code\\advent-of-code-2025\\AdventOfCode2025\\AdventOfCode2025\\Output";
+        
+        protected string InputPath { get; } = _inputPath;
+        protected string OutputPath { get; } = _outputPath;
+
         protected abstract void CreateOutput();
     }
 }
